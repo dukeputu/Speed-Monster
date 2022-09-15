@@ -15,7 +15,9 @@
 
 <body>
   <h1 class="title"><img src="./logo.png" /></h1>
-
+  <div class="buttons">
+    <button onclick="window.location.href = 'index.html'">Home</button>
+  </div>
   <div class="divider-container">
     <div class="line"></div>
     <h1 class="title2">Blogs</h1>
@@ -27,24 +29,75 @@
     <div class="acc-kontainer">
       <div>
         <input type="radio" name="acc" id="acc1" checked>
-        <label for="acc1"><i class="fa fa-map-marker"></i> My name?</label>
+        <label for="acc1">* What is difference between local storage and session storage? </label>
         <div class="acc-body">
-          Hi, You can call me Dandi.
+          <p>Web applications can store data locally within the user's browser</p>
+          <p>Before HTML5, application data had to be stored in cookies, included in every server request. Web storage
+            is more secure, and large amounts of data can be stored locally, without affecting website performance.</p>
+          <p>HTML web storage provides two objects for storing data on the client:</p>
+          <ul>
+            <li><b>window.localStorage</b> - stores data with no expiration date</li>
+            <li><b>window.sessionStorage</b> - stores data for one session (data is lost when the browser tab is closed)
+            </li>
+          </ul>
+          <p><b>The localStorage Object:</b></p>
+          <p>The localStorage object stores the data with no expiration date. The data will not be deleted when the
+            browser is closed, and will be available the next day, week, or year.</p>
+          <p>// Store <br>
+            localStorage.setItem("lastname", "Sau");</p>
+          <p>// Retrieve
+            <br>
+            localStorage.getItem("lastname");
+          </p>
+          <p>//Remove
+            <br>
+            localStorage.removeItem("lastname");
+          </p>
+          <p><b>The sessionStorage Object:</b></p>
+          <p>The <b>sessionStorage</b> object is equal to the localStorage object, except that it stores the data for
+            only one session. The data is deleted when the user closes the specific browser tab.</p>
         </div>
       </div>
       <div>
         <input type="radio" name="acc" id="acc2">
-        <label for="acc2"><i class="fa fa-heart"></i> What am I interesting for?</label>
+        <label for="acc2">* Javascript event loop</label>
         <div class="acc-body">
-          All the thing about Technology! Informatic technology especially.
+          <p>Event loop basically is a result of event driven programming.
+            Theoretically, event driven programming is application flow control that is based on events or change in
+            state.
+
+            In JavaScript, this is implemented using a central mechanism which listens for events and calls a callback
+            function associated with it, whenever such event is triggered.</p>
+<p>An event loop is often times the “main” of a program that handles events. If you have written a program you know that it will exit when it is done. Programs that run indefinitely like UI applications, video games, web servers, etc will have some form of an event loop. They can come in different flavors such as being a polling loop (check if there is an event every time it loops) or it can be handled via blocks and something triggers it to come and do it's job.</p>
         </div>
       </div>
       <div>
         <input type="radio" name="acc" id="acc3">
-        <label for="acc3"><i class="fa fa-music"></i> What is my hobby?</label>
+        <label for="acc3">* What is difference between global scope and block scope in javascript.</label>
         <div class="acc-body">
-          i love music <i class="fa fa-headphones"></i>, watching movie <i class="fa fa-film"></i>, Designing
-          maybe <i class="fa fa-code"></i>
+    <p>This is slowly changing, as more developers adopt the ES6 standard of using ‘let’ (and ‘const’) instead of ‘var’.
+
+      A variables declared ‘var’ is scoped to the function where it is declared (and child functions). Variables declared ‘var’ outside a function are essentially global, as all code on that page (even in other  tags) can access it.
+      
+      A variable declared ‘let’ (new in ES6 aka ECMAScript 2015) is scoped to the block where it is declared (and child blocks). A “block” is any code enclosed in { braces } . So a variable could be scoped to a FOR loop, or an ELSE statement, or a function, or a SWITCH statement, or even just arbitrary { code } in the middle of your function, without a conditional or loop or any other reason for the braces.
+      
+      (For completeness, ‘const’ scope is also block-based, same as ‘let’.)</p>
+        </div>
+      </div>
+      <div>
+        <input type="radio" name="acc" id="acc4">
+        <label for="acc4">* How many way to get undefined javascript</label>
+        <div class="acc-body">
+         <p>An undeclared variable is a when you use a variable without “declaring” it with the keywords: “var”, “let”, or “const”</p>
+         <p>An undefined variable is a variable that is declared but has been assigned no value.</p>
+         <p>Another term you may see is to “initialize” a variable. That is when a variable is assigned a value.</p>
+         <p>It can be done during creation: var x = 1 //declared and initialized</p>
+         <p>or at a later time after declaration:</p>
+         <p><pre>var x; // declare 
+          somecode() 
+          x = 1 // intialize </pre></p>
+          <p>An example</p>
+          <p><pre>console.log(x) // error. X is not declared at all. </pre></p>
         </div>
       </div>
     </div>
